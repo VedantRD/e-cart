@@ -1,0 +1,38 @@
+<div className="wholenav">
+                <div className="">
+                    <div className="">
+                    <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
+                        <div className="mx-3">
+                            <Link to="/" className="">
+                                <MyButton className="btn btn-light homeButton bg-dark">
+                                    <i className="fa fa-home mr-2"></i><span>home</span>
+                                </MyButton>
+                            </Link>
+                        </div>
+                        <div className="">
+                            <Link to="/productList" className="">
+                                <MyButton className="btn bg-dark btn-light homeButton">
+                                    <i className="fa fa-tablet mr-2"></i><span>Product List</span>
+                                </MyButton>
+                            </Link>
+                        </div>
+                        <div className=" searchBar">
+                            <div className="input-group">
+                                <input className="form-control pl-3" type="text" placeholder="search here"></input>
+                                <div className="input-group-append">
+                                    <button className="btn text-light bg-secondary">Search</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="ml-auto mr-4">
+                            <Link to="/cart" className=" ">
+                                <MyButton className="btn btn-light bg-dark">
+                                    <i className="fa fa-cart-plus mr-2"></i>
+                                    cart
+                                </MyButton>
+                            </Link>
+                        </div>
+                    </nav>
+                    </div>
+                </div>
+            </div>

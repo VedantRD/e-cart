@@ -1,0 +1,81 @@
+:root{
+  --myfont: arial;
+  --mainwhite: #f9f9f9;
+}
+
+body{
+  font-family: var(--myfont) !important;
+  background: var(--mainwhite) !important;
+}
+
+.homeButton{
+  padding: 0.35rem 0.4rem !important;
+}
+
+/* ==================================================== */
+
+.card{
+  background: #f3f3f3 !important;
+  border-radius: 8px !important;
+}
+
+img{
+  height: 15rem;
+  width:100% ;
+  background-size: cover;
+}
+
+/*====================== showmore button in productlist ========================*/
+
+.showmore{
+  padding: 0.3rem 0.35rem !important;
+  border-radius: 0.3rem !important;
+  font-size: 0.8rem !important;
+}
+
+
+/*========================== Card of details.js page =============================*/
+
+.details-card{
+  border-radius: 1.2rem !important;
+}
+
+/*==== addtocart button ====*/
+
+.addtocart{
+  margin-left: 0rem !important;
+  margin-right: 0rem !important;
+  width: 100% !important;
+}
+
+/* ========================== Discount Tag ================================== */
+
+.discountTag{
+  display: inline-block !important;
+  padding: 0.2rem;
+  width: 30%;
+  text-align:center;
+  margin-left: 70%;
+  border-radius: 0rem 0.35rem 0rem 0.6rem;
+
+}
+
+
+/* ======================= list items on details page ======================== */
+
+ul{
+  list-style-type: none;
+}
+
+/* ====================== Navigation Bar ========================= */
+.searchBar{
+  width: 25% !important;
+}
+
+
+/* =================== Home Page ======================== */
+
+.homePageCard{
+  margin-left: 15%;
+  width: 70% !important;
+}
