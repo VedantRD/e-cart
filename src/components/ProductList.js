@@ -14,7 +14,7 @@ class ProductList extends Component {
             <div className="container mt-3">
                 <div className="row">
                     {productData.map((data,index) => {
-                        return <div className="col-lg-3 col-md-4 col-sm-6 col-xs-6 mb-3" key={data.name}>
+                        return <div className="col-lg-3 col-md-4 col-sm-6 col-xs-6 mb-3" key={data.id}>
                             <div className="card">
                                 <span className="discountTag bg-success text-white">{data.discount} off</span>
                                 <img className="card-img-top mt-2" src={data.img} alt="Img not found"/>

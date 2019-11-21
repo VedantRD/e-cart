@@ -13,11 +13,11 @@ export default class LoginModal extends Component {
                         <div className="modal-body p-5">
                             <form className="">
                                 <div className="form-group">
-                                    <label for="username">Username</label>
+                                    <label htmlFor="username">Username</label>
                                     <input className="form-control" type="text" placeholder="Enter Username"></input>
                                 </div>
                                 <div className="form-group">
-                                    <label for="password">Password</label>
+                                    <label htmlFor="password">Password</label>
                                     <input className="form-control" type="password" placeholder="Enter Password"></input>
                                 </div>
                             </form>

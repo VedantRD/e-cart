@@ -5,7 +5,8 @@ import { MyButton } from './Button.js';
 export default class Details extends Component {
     
     render() {  
-        const ind = this.props.match.params.myindex;
+        console.log(this.props)
+        const ind = this.props.id;
         const data = productData[ind];
         return (
             <div className="container">
@@ -23,7 +24,9 @@ export default class Details extends Component {
                                         <MyButton className="btn text-white bg-primary addtocart mb-1">Buy Now</MyButton>
                                     </div>
                                     <div className="col-md-6">
-                                        <MyButton className="btn text-white bg-primary addtocart">Add to cart</MyButton>
+                                        <MyButton className="btn text-white bg-primary addtocart"
+                                            onClick={() =>this.props.handleAddCart(ind)}
+                                        >Add to cart</MyButton>
                                     </div>
                                 </div>
                             </div>
