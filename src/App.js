@@ -11,7 +11,17 @@ import Default from './components/Default';
 import Home from './components/Home';
 
 class App extends Component {
-  state = { index : 2 }
+  state = { 
+    index : 2 ,
+    cartItems:[]
+  }
+  handleAddCart=(id)=>{
+    const cartItems = [...this.state.cartItems ,id];
+    this.setState({
+      cartItems
+    })
+   
+  }
   render() { 
     return ( 
     <React.Fragment>
@@ -19,8 +29,17 @@ class App extends Component {
       <Switch>
         <Route exact path="/" component={Home}></Route>
         <Route path="/productlist" component={ProductList}></Route>
-        <Route path={"/details/:myindex"} component={Details}></Route>
-        <Route path="/cart" component={Cart}></Route>
+        <Route path={"/details/:myindex"} 
+              component={(props)=>
+                <Details 
+                  handleAddCart={this.handleAddCart} 
+                  id={props.match.params.myindex}>
+                </Details>}>
+        </Route>
+        <Route path="/cart" 
+              component={()=>
+                <Cart cartItems={this.state.cartItems}></Cart>}>
+        </Route>
         <Route component={Default}></Route>
       </Switch>
     </React.Fragment> 
