@@ -26,7 +26,7 @@ export default class Home extends Component {
                         <div className="row">
                             <div className="col-md-4"></div>
                             <div className="col-md-2">
-                                <Link><button className="btn btn-dark w-100 m-1" data-toggle="modal" data-target="#registerModal">Register</button></Link>
+                                <Link to="#"><button className="btn btn-dark w-100 m-1" data-toggle="modal" data-target="#registerModal">Register</button></Link>
                             </div>
                             <div className="col-md-2">
                                 <button className="btn btn-dark w-100 m-1" data-toggle="modal" data-target="#loginModal">Login</button>

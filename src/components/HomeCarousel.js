@@ -15,7 +15,7 @@ export default class HomeCarousel extends Component {
                                 </div> 
                                 {productData.map(data => {
                                     return (
-                                        <div className="carousel-item">
+                                        <div className="carousel-item" key={data.id}>
                                             <img className="d-block img-fluid" src={data.img} alt="img not found"></img>
                                         </div>   
                                     )
@@ -25,10 +25,10 @@ export default class HomeCarousel extends Component {
                             {/* ===========  control buttons for carousel =============*/}
                             
                             <a href="#mycarousel" className="carousel-control-prev" data-slide="prev">
-                                <i class="fa fa-angle-left fa-2x text-dark" aria-hidden="true"></i>
+                                <i className="fa fa-angle-left fa-2x text-dark" aria-hidden="true"></i>
                             </a>
                             <a href="#mycarousel" className="carousel-control-next" data-slide="next">
-                                <i class="fa fa-angle-right fa-2x text-dark" aria-hidden="true"></i>
+                                <i className="fa fa-angle-right fa-2x text-dark" aria-hidden="true"></i>
                             </a>
                         </div>   
                     </div>                        

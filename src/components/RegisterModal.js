@@ -13,15 +13,15 @@ export default class RegisterModal extends Component {
                         <div className="modal-body p-4 px-5">
                             <form className="">
                                 <div className="form-group">
-                                    <label for="username">First Name</label>
+                                    <label htmlFor="username">First Name</label>
                                     <input className="form-control" type="text" placeholder="Enter Username"></input>
                                 </div>
                                 <div className="form-group">
-                                    <label for="password">Last Name</label>
+                                    <label htmlFor="password">Last Name</label>
                                     <input className="form-control" type="text" placeholder="Enter Lastname"></input>
                                 </div>
                                 <div className="form-group">
-                                    <label for="password">Gender</label>
+                                    <label htmlFor="password">Gender</label>
                                     <div className="ml-5 pl-5">
                                         <input className="mr-2" type="radio" name="gender"/>
                                         <span className="mr-5">Male</span>
@@ -30,11 +30,11 @@ export default class RegisterModal extends Component {
                                     </div>
                                 </div>
                                 <div className="form-group">
-                                    <label for="password">Address</label>
+                                    <label htmlFor="password">Address</label>
                                     <textarea className="form-control" placeholder="Enter Address"></textarea>
                                 </div>
                                 <div className="form-group">
-                                    <label for="password" className="mb-2">Set Password</label>
+                                    <label htmlFor="password" className="mb-2">Set Password</label>
                                     <input className="form-control mb-2" type="password" placeholder="Enter Password"></input>
                                     <input className="form-control" type="password" placeholder="Confirm Password"></input>
                                 </div>

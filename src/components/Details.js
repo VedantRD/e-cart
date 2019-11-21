@@ -4,8 +4,18 @@ import { MyButton } from './Button.js';
 
 export default class Details extends Component {
     
+    state = {
+        msg : ""
+    }
+
+    addToCartClickHandler = () =>{
+        this.setState({
+            msg : "item added successfully"
+        })
+    }
+    
     render() {  
-        const ind = this.props.match.params.myindex;
+        const ind = this.props.ind;
         const data = productData[ind];
         return (
             <div className="container">
@@ -23,7 +33,12 @@ export default class Details extends Component {
                                         <MyButton className="btn text-white bg-primary addtocart mb-1">Buy Now</MyButton>
                                     </div>
                                     <div className="col-md-6">
-                                        <MyButton className="btn text-white bg-primary addtocart">Add to cart</MyButton>
+                                        <MyButton className="btn text-white bg-primary addtocart"
+                                            onClick = {() =>this.props.handleAddCart(ind)}>Add to cart
+                                        </MyButton>
+                                    </div>
+                                    <div className="col-md-12 pl-5 pt-2 text-success">
+                                        {this.msg}
                                     </div>
                                 </div>
                             </div>
