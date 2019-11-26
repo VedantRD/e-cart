@@ -25,12 +25,19 @@ img{
   background-size: cover;
 }
 
+/* ========================= Filter Buttons in Productlist ======================= */
+
+.myFilter{
+  margin-left: 70%;
+}
+
 /*====================== showmore button in productlist ========================*/
 
 .showmore{
   padding: 0.3rem 0.35rem !important;
   border-radius: 0.3rem !important;
   font-size: 0.8rem !important;
+  color: white;
 }
 
 

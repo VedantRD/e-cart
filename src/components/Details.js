@@ -3,18 +3,18 @@ import productData from '../mydata.json'
 import { MyButton } from './Button.js';
 
 export default class Details extends Component {
-    
+
     state = {
-        msg : ""
+        msg: ""
     }
 
-    addToCartClickHandler = () =>{
+    addToCartClickHandler = () => {
         this.setState({
-            msg : "item added successfully"
+            msg: "item added successfully"
         })
     }
-    
-    render() {  
+
+    render() {
         const ind = this.props.ind;
         const data = productData[ind];
         return (
@@ -25,8 +25,8 @@ export default class Details extends Component {
                         <div className="row mt-4 align-items-center">
                             <div className="col-md-2"></div>
                             <div className="col-md-4">
-                                <div className="row">   
-                                    <img className="align-self-center px-4 mb-2 mt-5" src = {"../"+data.img} alt="not found"></img>
+                                <div className="row">
+                                    <img className="align-self-center px-4 mb-2 mt-5" src={"../" + data.img} alt="not found"></img>
                                 </div>
                                 <div className="row align-items-center mt-5">
                                     <div className="col-md-6">
@@ -34,7 +34,7 @@ export default class Details extends Component {
                                     </div>
                                     <div className="col-md-6">
                                         <MyButton className="btn text-white bg-primary addtocart"
-                                            onClick = {() =>this.props.handleAddCart(ind)}>Add to cart
+                                            onClick={() => this.props.handleAddCart(ind)}>Add to cart
                                         </MyButton>
                                     </div>
                                     <div className="col-md-12 pl-5 pt-2 text-success">
@@ -49,34 +49,34 @@ export default class Details extends Component {
                                 <ul className="text-muted mt-3 pl-5">
                                     <li className="p-1">
                                         <i className="fa fa-tag mr-3"></i>Company : {data.company}
-                                    </li> 
+                                    </li>
                                     <li className="p-1">
                                         <i className="fa fa-tag mr-3"></i>Ram : {data.ram}
-                                    </li> 
+                                    </li>
                                     <li className="p-1">
                                         <i className="fa fa-tag mr-3"></i>Storage : {data.rom}
-                                    </li> 
+                                    </li>
                                     <li className="p-1">
                                         <i className="fa fa-tag mr-3"></i>Rear Camera : {data.rearCam}
-                                    </li> 
+                                    </li>
                                     <li className="p-1">
                                         <i className="fa fa-tag mr-3"></i>Front Camera : {data.frontCam}
-                                    </li> 
+                                    </li>
                                     <li className="p-1">
                                         <i className="fa fa-tag mr-3"></i>Battery Capacity : {data.battery}
-                                    </li> 
+                                    </li>
                                     <li className="p-1">
                                         <i className="fa fa-tag mr-3"></i>Screen Size : {data.screenSize}
-                                    </li> 
+                                    </li>
                                     <li className="p-1">
                                         <i className="fa fa-tag mr-3"></i>Display Type : {data.display}
-                                    </li> 
+                                    </li>
                                     <li className="p-1">
                                         <i className="fa fa-tag mr-3"></i>Processor : {data.processor}
-                                    </li> 
+                                    </li>
                                     <li className="p-1">
                                         <i className="fa fa-tag mr-3"></i>Operating Frequency : {data.frequency}
-                                    </li> 
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -86,14 +86,14 @@ export default class Details extends Component {
                                 <div className="row">
                                     <p className="h6 text-muted col-md-3">Description : </p>
                                     <p className="text-muted h6 col-md-9">
-                                        {data.desc1} <br/><br/> {data.desc2}
+                                        {data.desc1} <br /><br /> {data.desc2}
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className="col-md-1"></div>
-                </div>    
+                </div>
             </div>
         )
     }
