@@ -40,6 +40,9 @@ img{
   color: white;
 }
 
+.listCard:hover,.listCard:focus{
+  background: #E8E8E8 !important;
+}
 
 /*========================== Card of details.js page =============================*/
 

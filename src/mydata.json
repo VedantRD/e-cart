@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "id": 0,
         "name": "HTC Red Magic",
         "price": 21449,
         "ram": "4gb",
@@ -19,7 +19,7 @@
         "discount": "24%"
     },
     {
-        "id": 2,
+        "id": 1,
         "name": "Google Pixel 1",
         "price": 28999,
         "ram": "3gb",
@@ -38,7 +38,7 @@
         "discount": "40%"
     },
     {
-        "id": 3,
+        "id": 2,
         "name": "iPhone 7",
         "price": 56500,
         "ram": "3gb",
@@ -57,7 +57,7 @@
         "discount": "21%"
     },
     {
-        "id": 4,
+        "id": 3,
         "name": "Galaxy Note 6",
         "price": 32999,
         "ram": "4gb",
@@ -76,7 +76,7 @@
         "discount": "35%"
     },
     {
-        "id": 5,
+        "id": 4,
         "name": "iPhone 6",
         "price": 37999,
         "ram": "2gb",
@@ -95,7 +95,7 @@
         "discount": "17%"
     },
     {
-        "id": 6,
+        "id": 5,
         "name": "Galaxy J7",
         "price": 14449,
         "ram": "4gb",
@@ -114,7 +114,7 @@
         "discount": "25%"
     },
     {
-        "id": 7,
+        "id": 6,
         "name": "HTC X1",
         "price": 21999,
         "ram": "4gb",
@@ -133,7 +133,7 @@
         "discount": "30%"
     },
     {
-        "id": 8,
+        "id": 7,
         "name": "Broken iPhone",
         "price": 251,
         "ram": "3gb",

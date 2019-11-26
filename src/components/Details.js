@@ -15,8 +15,8 @@ export default class Details extends Component {
     }
 
     render() {
-        const ind = this.props.ind;
-        const data = productData[ind];
+        const id = this.props.id;
+        const data = productData[id];
         return (
             <div className="container">
                 <div className="row">
@@ -34,7 +34,7 @@ export default class Details extends Component {
                                     </div>
                                     <div className="col-md-6">
                                         <MyButton className="btn text-white bg-primary addtocart"
-                                            onClick={() => this.props.handleAddCart(ind)}>Add to cart
+                                            onClick={() => this.props.handleAddCart(id)}>Add to cart
                                         </MyButton>
                                     </div>
                                     <div className="col-md-12 pl-5 pt-2 text-success">
