@@ -11,7 +11,6 @@ import Cart from './components/Cart';
 import Default from './components/Default';
 import Home from './components/Home';
 import Login from './Login';
-//import Register from './Register';
 
 class App extends Component {
 
