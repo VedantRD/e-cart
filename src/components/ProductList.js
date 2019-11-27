@@ -7,8 +7,11 @@ import RenderProduct from './RenderProduct.js';
 class ProductList extends Component {
 
     state = {
-        products: productData
+        products: productData,
+        defaultList: productData
     }
+
+    // -------------------------- FIlters ------------------------------ //
 
     filterByPrice1 = () => {
         var products = productData.filter((item) => {
@@ -31,26 +34,63 @@ class ProductList extends Component {
         this.setState({ products })
     }
 
-    removeFilter = () => {
+    // ---------------------- End of Filters ------------------------- //
+
+    // -------------------- Sorting Product List --------------------- //
+
+    sortLowToHigh = () => {
+        let productSort = this.state.products
+        productSort.sort((a, b) => a.price - b.price)
+        this.setState({
+            products: productSort
+        })
+    }
+
+    sortHighToLow = () => {
+        let productSort = this.state.products
+        productSort.sort((a, b) => b.price - a.price)
+        this.setState({
+            products: productSort
+        })
+    }
+
+    sortDefault = () => {
         let products = productData.map((item) => {
             return item
         })
         this.setState({ products })
     }
 
+    // ---------------------- End of Sorting ------------------------- //
+    removeFilter = () => {
+        this.setState({ products: this.state.defaultList })
+    }
+
+    // ========================================== Render =========================================== //
+
     render() {
         return (
             <div className="container mt-3">
                 <div className="row">
-                    <div className="dropdown ml-auto mb-3 mr-3">
-                        <button className="btn btn-dark dropdown-toggle mr-2" data-toggle="dropdown">
+                    <div className="dropdown ml-auto mb-3 mr-2">
+                        <button className="bg-dark btn text-light mr-2" onClick={this.removeFilter}>Remove filters</button>
+                        <button className="btn btn-dark dropdown-toggle" data-toggle="dropdown">
                             <span className="mr-2">Filters</span>
                         </button>
-                        <button className="bg-dark btn text-light" onClick={this.removeFilter}>Remove filters</button>
                         <div className="dropdown-menu bg-dark">
                             <button className="bg-dark dropdown-item text-light" onClick={this.filterByPrice1}>less than 30,000</button>
                             <button className="bg-dark dropdown-item text-light" onClick={this.filterByPrice2}>greater than 30,000</button>
                             <button className="bg-dark dropdown-item text-light" onClick={this.filterByPrice3}>20,000 - 40,000</button>
+                        </div>
+                    </div>
+                    <div className="dropdown mr-3">
+                        <button className="btn btn-dark dropdown-toggle" data-toggle="dropdown">
+                            <span className="mr-2">Sort By</span>
+                        </button>
+                        <div className="dropdown-menu bg-dark">
+                            <button className="bg-dark dropdown-item text-light" onClick={this.sortDefault}>Default</button>
+                            <button className="bg-dark dropdown-item text-light" onClick={this.sortLowToHigh}>Price low to high</button>
+                            <button className="bg-dark dropdown-item text-light" onClick={this.sortHighToLow}>price high to low</button>
                         </div>
                     </div>
                 </div>
