@@ -29,12 +29,12 @@ export default class Details extends Component {
                                 <div className="row">
                                     <img className="align-self-center px-4 mb-2 mt-5" src={"../" + data.img} alt="not found"></img>
                                 </div>
-                                <div className="row align-items-center mt-5">
-                                    <div className="col-md-6">
+                                <div className="row align-items-center justify-content-around mt-5">
+                                    {/* <div className="col-md-6">
                                         <MyButton className="btn text-white bg-primary addtocart mb-1">Buy Now</MyButton>
-                                    </div>
-                                    <div className="col-md-6">
-                                        <MyButton className="btn text-white bg-primary addtocart"
+                                    </div> */}
+                                    <div className="w-50">
+                                        <MyButton className="btn btn-dark addtocart"
                                             onClick={() => this.props.handleAddCart(data)}>Add to cart
                                         </MyButton>
                                     </div>

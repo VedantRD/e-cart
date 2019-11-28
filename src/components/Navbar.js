@@ -54,11 +54,11 @@ class Navbar extends Component {
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                    <div className="nav-link">
-                                        <MyButton className="btn btn-light bg-dark" onClick={this.logout}>
-                                            Logout<i className="fa fa-sign-out ml-2"></i>
-                                        </MyButton>
-                                    </div>
+                                <Link to="/" className="nav-link">
+                                    <MyButton className="btn btn-light bg-dark" onClick={this.logout}>
+                                        Logout<i className="fa fa-sign-out ml-2"></i>
+                                    </MyButton>
+                                </Link>
                             </li>
                         </ul>
                     </div>

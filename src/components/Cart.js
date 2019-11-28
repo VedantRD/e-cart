@@ -22,7 +22,7 @@ export default class Cart extends Component {
                                         <div className=""></div>
                                         <div className="col-md-6 col-xs-7 pt-4 pl-5">
                                             <p>Name : {data.name}</p>
-                                            <p>price : {data.price}</p>
+                                            <p>price : Rs.{data.price}</p>
                                             <div className="ml-5">
                                                 <button className="btn bg-danger text-light mt-5 p-2"
                                                     onClick={
