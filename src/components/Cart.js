@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
-import productData from '../mydata.json';
+//import productData from '../mydata.json';
 
 export default class Cart extends Component {
     render() {
         const cartItems = this.props.cartItems
-        console.log(cartItems) 
+        console.log(cartItems)
         return (
             <div className="container">
                 <div className="text-dark text-center h2 pt-5 pb-4 font-weight-bold">
-                    Items in the Cart 
+                    Items in the Cart
                 </div>
                 <div className="row container mt-4">
-                    {cartItems.map((item)=>{
-                        const data = productData[item]
-                        return(
+                    {cartItems.map((item) => {
+                        //const data = productData[item]
+                        const data = item;
+                        return (
                             <div className="col-md-6" key={data.id}>
                                 <div className="card mb-4">
                                     <div className="row container">
@@ -24,7 +25,7 @@ export default class Cart extends Component {
                                             <p>price : {data.price}</p>
                                             <div className="ml-5">
                                                 <button className="btn bg-danger text-light mt-5 p-2"
-                                                    onClick = {
+                                                    onClick={
                                                         () => this.props.removeFromCart(item)
                                                     }>Remove
                                                 </button>

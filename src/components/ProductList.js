@@ -6,9 +6,12 @@ import RenderProduct from './RenderProduct.js';
 
 class ProductList extends Component {
 
-    state = {
-        products: productData,
-        defaultList: productData
+    constructor() {
+        super()
+        this.state = {
+            products: productData,
+            defaultList: productData
+        }
     }
 
     // -------------------------- FIlters ------------------------------ //
@@ -94,7 +97,7 @@ class ProductList extends Component {
                         </div>
                     </div>
                 </div>
-                <RenderProduct prods={this.state.products}></RenderProduct>
+                <RenderProduct prods={this.state.products} handleDetail={this.props.handleDetail}></RenderProduct>
             </div>
         );
     }

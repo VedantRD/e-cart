@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import productData from '../mydata.json'
+//import productData from '../mydata.json'
 import { MyButton } from './Button.js';
 
 export default class Details extends Component {
@@ -15,8 +15,9 @@ export default class Details extends Component {
     }
 
     render() {
-        const id = this.props.id;
-        const data = productData[id];
+        //const id = this.props.id;
+        //const data = productData[id];
+        const data = this.props.myProduct;
         return (
             <div className="container">
                 <div className="row">
@@ -34,7 +35,7 @@ export default class Details extends Component {
                                     </div>
                                     <div className="col-md-6">
                                         <MyButton className="btn text-white bg-primary addtocart"
-                                            onClick={() => this.props.handleAddCart(id)}>Add to cart
+                                            onClick={() => this.props.handleAddCart(data)}>Add to cart
                                         </MyButton>
                                     </div>
                                     <div className="col-md-12 pl-5 pt-2 text-success">

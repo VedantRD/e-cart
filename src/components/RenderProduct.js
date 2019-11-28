@@ -7,7 +7,7 @@ export default class RenderProduct extends Component {
             <div className="row">
                 {this.props.prods.map((data, index) => {
                     return <div className="col-lg-3 col-md-4 col-sm-6 col-xs-6 mb-3" key={data.id}>
-                        <Link to={'/details/' + index} style={{ textDecoration: 'none' }} className="hoverProduct">
+                        <Link onClick={() => this.props.handleDetail(data)} to={'/details/' + index} style={{ textDecoration: 'none' }} className="hoverProduct">
                             <div className="card listCard">
                                 <span className="discountTag bg-success text-white">{data.discount} off</span>
                                 <img className="card-img-top mt-2" src={data.img} alt="Img not found" />

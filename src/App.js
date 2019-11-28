@@ -20,6 +20,7 @@ class App extends Component {
       id: 2,
       cartItems: [],
       user: {},
+      myProduct: {}
     }
   }
 
@@ -55,18 +56,30 @@ class App extends Component {
     })
   }
 
+  handleDetail = (myProduct) => {
+    this.setState({ myProduct })
+    console.log(myProduct.name)
+  }
+
   render() {
     return (
       <React.Fragment>
         <Navbar />
         <Switch>
           {this.state.user == null ? (<Route exact path="/" component={Login}></Route>) : (<Route exact path="/" component={Home}></Route>)}
-          < Route path="/productlist" component={ProductList}></Route>
+          <Route path="/productlist"
+            component={() =>
+              <ProductList
+                handleDetail={this.handleDetail}>
+              </ProductList>
+            }>
+          </Route>
           <Route path={"/details/:myid"}
-            component={(props) =>
+            component={() =>
               <Details
                 handleAddCart={this.handleAddCart}
-                id={props.match.params.myid}>
+                /* id={props.match.params.myid} */
+                myProduct={this.state.myProduct}>
               </Details>
             }>
           </Route>
