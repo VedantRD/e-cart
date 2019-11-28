@@ -7,12 +7,11 @@ import ProductList from './components/ProductList';
 import Navbar from './components/Navbar';
 import Details from './components/Details';
 import Cart from './components/Cart';
-//import Default from './components/Default';
+import Default from './components/Default';
 import Home from './components/Home';
 import Login from './Login';
 
 class App extends Component {
-
   constructor() {
     super()
     this.state = {
@@ -66,30 +65,37 @@ class App extends Component {
         <Navbar />
         <Switch>
           {this.state.user == null ?
-            <Route exact path="/" component={Login}></Route> :
             <React.Fragment>
-              <Route exact path="/" component={Home}></Route>
-              <Route path="/productlist"
-                component={() =>
-                  <ProductList
-                    handleDetail={this.handleDetail}>
-                  </ProductList>
-                }>
-              </Route>
-              <Route path={"/details/:myid"}
-                component={() =>
-                  <Details
-                    handleAddCart={this.handleAddCart}
-                    /* id={props.match.params.myid} */
-                    myProduct={this.state.myProduct}>
-                  </Details>
-                }>
-              </Route>
-              <Route path="/cart"
-                component={() =>
-                  <Cart cartItems={this.state.cartItems} removeFromCart={this.handleRemoveFromCart}></Cart>}>
-              </Route>
-              {/* <Route component={Default}></Route> */}
+              <Switch>
+                <Route exact path="/" component={Login}></Route>
+                <Route component={Default}></Route>
+              </Switch>
+            </React.Fragment> :
+            <React.Fragment>
+              <Switch>
+                <Route exact path="/" component={Home}></Route>
+                <Route path="/productlist"
+                  component={() =>
+                    <ProductList
+                      handleDetail={this.handleDetail}>
+                    </ProductList>
+                  }>
+                </Route>
+                <Route path={"/details/:myid"}
+                  component={() =>
+                    <Details
+                      handleAddCart={this.handleAddCart}
+                      /* id={props.match.params.myid} */
+                      myProduct={this.state.myProduct}>
+                    </Details>
+                  }>
+                </Route>
+                <Route path="/cart"
+                  component={() =>
+                    <Cart cartItems={this.state.cartItems} removeFromCart={this.handleRemoveFromCart}></Cart>}>
+                </Route>
+                {/* <Route component={Default}></Route> */}
+              </Switch>
             </React.Fragment>
           }
         </Switch>

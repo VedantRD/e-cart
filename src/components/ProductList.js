@@ -58,10 +58,10 @@ class ProductList extends Component {
     }
 
     sortDefault = () => {
-        let products = productData.map((item) => {
+        /* let products = productData.map((item) => {
             return item
-        })
-        this.setState({ products })
+        }) */
+        this.setState({ products: this.state.defaultList })
     }
 
     // ---------------------- End of Sorting ------------------------- //
