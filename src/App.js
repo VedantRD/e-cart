@@ -60,7 +60,7 @@ class App extends Component {
       <React.Fragment>
         <Navbar />
         <Switch>
-          {this.state.user ? (<Route exact path="/" component={Home}></Route>) : (<Route exact path="/" component={Login}></Route>)}
+          {this.state.user == null ? (<Route exact path="/" component={Login}></Route>) : (<Route exact path="/" component={Home}></Route>)}
           < Route path="/productlist" component={ProductList}></Route>
           <Route path={"/details/:myid"}
             component={(props) =>

@@ -1,5 +1,5 @@
 :root{
-  --myfont: arial;
+  --myfont: comic sans ms;
   --mainwhite: #f9f9f9;
 }
 
@@ -92,13 +92,6 @@ ul{
 
 /* ====================== Login Page ========================== */
 
-.loginBtn{
-  margin-left : 25%;
-}
-
 .loginBox{
-  margin-top : 6% !important;
-  background : #f3f3f3;
-  align-content:center;
-  align-items:center;
+  background: #f3f3f3 !important;
 }
