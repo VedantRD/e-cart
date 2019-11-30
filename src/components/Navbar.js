@@ -36,20 +36,20 @@ class Navbar extends Component {
                                 </Link>
                             </li>
                         </ul>
-                        <form className="form-inline ml-auto mr-3">
+                        {/* <form className="form-inline ml-auto mr-3">
                             <div className="input-group">
                                 <input className="form-control pl-3 pr-4" placeholder="Search Product Here"></input>
                                 <div className="input-group-append">
                                     <button className="btn btn-outline-secondary text-light">Search</button>
                                 </div>
                             </div>
-                        </form>
-                        <ul className="navbar-nav">
-                            <li className="nav-item">
+                        </form> */}
+                        <ul className="navbar-nav ml-auto">
+                            <li className="nav-item mr-5">
                                 <Link to="/cart" className="nav-link">
                                     <MyButton className="btn btn-light bg-dark">
                                         <i className="fa fa-cart-plus mr-2"></i>
-                                        cart
+                                        your cart
                                     </MyButton>
                                 </Link>
                             </li>

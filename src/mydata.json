@@ -16,7 +16,8 @@
         "battery": "4000mah",
         "processor": "Snapdragon 665",
         "frequency": "1.8Ghz",
-        "discount": "24%"
+        "discount": "24%",
+        "rating": 4.5
     },
     {
         "id": 1,
@@ -35,7 +36,8 @@
         "battery": "4300 mah",
         "processor": "Snapdragon 625",
         "frequency": "2.4GHz",
-        "discount": "40%"
+        "discount": "40%",
+        "rating": 4.7
     },
     {
         "id": 2,
@@ -54,7 +56,8 @@
         "battery": "3500 mah",
         "processor": "ios 13",
         "frequency": "2.2GHz",
-        "discount": "21%"
+        "discount": "21%",
+        "rating": 4.3
     },
     {
         "id": 3,
@@ -73,7 +76,8 @@
         "battery": "4100 mah",
         "processor": "Snapdragon 645",
         "frequency": "1.8GHz",
-        "discount": "35%"
+        "discount": "35%",
+        "rating": 4.8
     },
     {
         "id": 4,
@@ -92,7 +96,8 @@
         "battery": "3500 mah",
         "processor": "ios 13",
         "frequency": "1.8GHz",
-        "discount": "17%"
+        "discount": "17%",
+        "rating": 3.6
     },
     {
         "id": 5,
@@ -111,7 +116,8 @@
         "battery": "4200 mah",
         "processor": "Snapdragon 660",
         "frequency": "2.0GHz",
-        "discount": "25%"
+        "discount": "25%",
+        "rating": 4.1
     },
     {
         "id": 6,
@@ -130,7 +136,8 @@
         "battery": "4500 mah",
         "processor": "Snapdragon 675",
         "frequency": "2.2GHz",
-        "discount": "30%"
+        "discount": "30%",
+        "rating": 3.3
     },
     {
         "id": 7,
@@ -149,6 +156,7 @@
         "battery": "3400 mah",
         "processor": "ios 13",
         "frequency": "1.8GHz",
-        "discount": "15%"
+        "discount": "15%",
+        "rating": 2.0
     }
 ]

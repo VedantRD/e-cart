@@ -2,12 +2,19 @@
   /* --myfont: comic sans ms; */
   /* --myfont: Tahoma, Geneva, sans-serif; */
   --myfont: "Trebuchet MS", Helvetica, sans-serif;
-  --mainwhite: #f9f9f9;
+  --mainwhite: #f1eeee;
+  /* --mainwhite:#17a2b8; */
+}
+
+html, body {
+  overflow: auto !important;
+  min-height: 100% !important;
 }
 
 body{
   font-family: var(--myfont) !important;
   background: var(--mainwhite) !important;
+  height: 100vh !important;
 }
 
 .homeButton{
@@ -52,7 +59,7 @@ img{
   border-radius: 1.2rem !important;
 }
 
-/*==== addtocart button ====*/
+/*================================ addtocart button ===============================*/
 
 .addtocart{
   margin-left: 0rem !important;
@@ -87,10 +94,11 @@ ul{
 
 /* ====================== Home Page ======================== */
 
-.homePageCard{
-  margin-left: 15%;
-  width: 70% !important;
-}
+/* .homePageCard{
+  /* margin-left: 15%;
+  width: 70% !important; */
+  /* background: #f1eeee; */
+  /* height: 120%; */
 
 /* ====================== Login Page ========================== */
 
@@ -110,4 +118,8 @@ button:focus,
 input:focus,
 textarea:focus {
 outline: none !important;
+}
+
+.carouselBox{
+  border-radius: 1rem !important;
 }

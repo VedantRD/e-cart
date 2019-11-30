@@ -18,7 +18,9 @@ class App extends Component {
       id: 2,
       cartItems: [],
       user: {},
-      myProduct: {}
+      myProduct: {},
+      name: "",
+      lastName: ""
     }
   }
 
@@ -31,6 +33,12 @@ class App extends Component {
       if (user) {
         // User is signed in.
         this.setState({ user })
+        let email_id = user.email;
+        let [name, lastName] = email_id.split(".", 2);
+        [lastName] = lastName.split("@", 1);
+        //console.log(name);
+        //console.log(lastName);
+        this.setState({ name, lastName })
       } else {
         // No user is signed in.
         this.setState({ user: null })
@@ -73,7 +81,11 @@ class App extends Component {
             </React.Fragment> :
             <React.Fragment>
               <Switch>
-                <Route exact path="/" component={Home}></Route>
+                <Route exact path="/"
+                  component={() =>
+                    <Home user_name={this.state.name} user_lastname={this.state.lastName}></Home>
+                  }>
+                </Route>
                 <Route path="/productlist"
                   component={() =>
                     <ProductList
@@ -92,7 +104,8 @@ class App extends Component {
                 </Route>
                 <Route path="/cart"
                   component={() =>
-                    <Cart cartItems={this.state.cartItems} removeFromCart={this.handleRemoveFromCart}></Cart>}>
+                    <Cart cartItems={this.state.cartItems} removeFromCart={this.handleRemoveFromCart}>
+                    </Cart>}>
                 </Route>
                 {/* <Route component={Default}></Route> */}
               </Switch>
