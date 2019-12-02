@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 //import productData from '../mydata.json'
 import { MyButton } from './Button.js';
+import { Link } from 'react-router-dom';
 
 export default class Details extends Component {
 
@@ -23,7 +24,16 @@ export default class Details extends Component {
                 <div className="row">
                     <div className="col-md-1"></div>
                     <div className="card details-card mt-5 col-md-10">
-                        <div className="row mt-4 align-items-center">
+                        <div className="row">
+                            <div className="ml-5 mt-5">
+                                <Link to="/ProductList">
+                                    <button className="btn btn-outline-dark">
+                                        <span className="fa fa-arrow-left mr-2" aria-hidden="true"></span>Go Back
+                                    </button>
+                                </Link>
+                            </div>
+                        </div>
+                        <div className="row align-items-center">
                             <div className="col-md-2"></div>
                             <div className="col-md-4">
                                 <div className="row">
@@ -34,7 +44,7 @@ export default class Details extends Component {
                                         <MyButton className="btn text-white bg-primary addtocart mb-1">Buy Now</MyButton>
                                     </div> */}
                                     <div className="w-50">
-                                        <MyButton className="btn btn-dark addtocart"
+                                        <MyButton className="btn btn-info addtocart"
                                             onClick={() => this.props.handleAddCart(data)}>Add to cart
                                         </MyButton>
                                     </div>

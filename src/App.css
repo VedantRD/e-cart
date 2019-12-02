@@ -123,3 +123,64 @@ outline: none !important;
 .carouselBox{
   border-radius: 1rem !important;
 }
+
+.has-search .form-control {
+  padding-left: 3.375rem !important;
+}
+
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.65rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}
+
+/* #mySearch{
+  border-start-start-radius:30px !important ;
+  font-size: 20px !important;
+} */
+
+.mySearch{
+  border-top-left-radius: 10rem !important;
+  border-bottom-left-radius: 10rem !important;
+  font-size: 1.15rem !important;
+}
+
+.mySearchButton{
+  border-top-right-radius: 10rem !important;
+  border-bottom-right-radius: 10rem !important;
+}
+
+input:focus,button:focus{
+  outline: none !important;
+  box-shadow: none !important;
+} 
+
+button:hover{
+  background:rgb(233, 228, 228) !important;
+  /* color:#1da054 !important; */
+  color: black !important;
+  /* font-weight:600 !important; */
+  transition: .5s;
+  /* background: rgb(96, 161, 235) !important; */
+}
+
+.card:hover{
+  transition: .5s;
+}
+
+.removeBtn:hover,.myLogOut:hover{
+  color:red !important;
+  background:#f1eeee !important;
+}
+
+
+.myLogo{
+  height: 3.2rem;
+  width: 3.2rem;
+}

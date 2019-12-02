@@ -24,7 +24,7 @@ export default class Cart extends Component {
                                             <p>Name : {data.name}</p>
                                             <p>price : Rs.{data.price}</p>
                                             <div className="ml-5">
-                                                <button className="btn bg-danger text-light mt-5 p-2"
+                                                <button className="btn btn-danger text-light mt-5 p-2 removeBtn"
                                                     onClick={
                                                         () => this.props.removeFromCart(item)
                                                     }>Remove

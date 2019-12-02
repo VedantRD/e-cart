@@ -13,9 +13,12 @@ class Navbar extends Component {
 
     render() {
         return (
-            <nav className="navbar navbar-expand-lg bg-dark navbar-dark py-1">
+            <nav className="navbar navbar-expand-lg bg-primary navbar-dark py-1">
                 <div className="container">
-                    <div className="text-light navbar-brand mr-4">Ved Shopee</div>
+                    <div className="text-light mr-4 navbar-brand">
+                        <img src="Kasper.ico" alt="img not found" className="myLogo mr-1"></img>
+                        <span>Ved Shopee</span>
+                    </div>
                     <button className="navbar-toggler" data-toggle="collapse" data-target="#mynav">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -23,14 +26,14 @@ class Navbar extends Component {
                         <ul className="navbar-nav">
                             <li className="nav-item">
                                 <Link to="/" className="nav-link">
-                                    <MyButton className="btn btn-light homeButton bg-dark">
+                                    <MyButton className="btn btn-primary homeButton">
                                         <i className="fa fa-home mr-2"></i><span>home</span>
                                     </MyButton>
                                 </Link>
                             </li>
                             <li className="nav-item">
                                 <Link to="/productList" className="nav-link">
-                                    <MyButton className="btn bg-dark btn-light homeButton">
+                                    <MyButton className="btn btn-primary homeButton">
                                         <i className="fa fa-tablet mr-2"></i><span>Product List</span>
                                     </MyButton>
                                 </Link>
@@ -47,7 +50,7 @@ class Navbar extends Component {
                         <ul className="navbar-nav ml-auto">
                             <li className="nav-item mr-5">
                                 <Link to="/cart" className="nav-link">
-                                    <MyButton className="btn btn-light bg-dark">
+                                    <MyButton className="btn btn-primary">
                                         <i className="fa fa-cart-plus mr-2"></i>
                                         your cart
                                     </MyButton>
@@ -55,8 +58,8 @@ class Navbar extends Component {
                             </li>
                             <li className="nav-item">
                                 <Link to="/" className="nav-link">
-                                    <MyButton className="btn btn-light bg-dark" onClick={this.logout}>
-                                        Logout<i className="fa fa-sign-out ml-2"></i>
+                                    <MyButton className="btn btn-primary myLogOut" onClick={this.logout}>
+                                        {this.props.name}<i className="fa fa-sign-out ml-2"></i>
                                     </MyButton>
                                 </Link>
                             </li>

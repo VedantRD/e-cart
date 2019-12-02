@@ -70,7 +70,7 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <Navbar />
+        <Navbar name={this.state.name} />
         <Switch>
           {this.state.user == null ?
             <React.Fragment>

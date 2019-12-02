@@ -15,6 +15,19 @@ class ProductList extends Component {
         }
     }
 
+    // componentDidMount() {
+    //     $('.has-clear input[type="text"]').on('input propertychange', function () {
+    //         var $this = $(this);
+    //         var visible = Boolean($this.val());
+    //         $this.siblings('.form-control-clear').toggleClass('hidden', !visible);
+    //     }).trigger('propertychange');
+
+    //     $('.form-control-clear').click(function () {
+    //         $(this).siblings('input[type="text"]').val('')
+    //             .trigger('propertychange').focus();
+    //     });
+    // }
+
 
     // -------------------------- FIlters ------------------------------ //
 
@@ -78,7 +91,7 @@ class ProductList extends Component {
     // -------------------------------- Search bar ------------------------------- //
 
     searchByName = () => {
-        let value = document.getElementById("#mySearch").value.toLowerCase()
+        let value = document.getElementById("mySearch").value.toLowerCase()
         var products = productData.filter((item) => {
             return (item.name.toLowerCase().includes(value))
         })
@@ -90,37 +103,43 @@ class ProductList extends Component {
 
     render() {
         return (
-            <div className="container mt-3">
-                <div className="row no-gutters my-4 justify-content-center">
-                    <div className="w-75 mx-5">
-                        <div className="input-group">
-                            <input className="form-control pl-5 mr-2 rounded-pill rounded-right py-3" id="#mySearch" placeholder="Search Product Here"></input>
-                            <div className="input-group-append">
-                                <button className="btn btn-dark text-light rounded-pill w-100 px-4" onClick={this.searchByName}>Search</button>
-                            </div>
-                        </div>
+            <div className="container mt-4">
+                <div className="row no-gutters  my-3 justify-content-center input-group">
+                    {/* <div className="w-100">
+                        <div className="input-group w-100"> */}
+                    <div className="col-md-1"></div>
+                    <div className="form-group has-search col-md-8 col-sm-7">
+                        <span className="fa fa-search form-control-feedback pl-3"></span>
+                        <input className="field form-control pl-5 py-3 mySearch bg-light" id="mySearch" placeholder="Search Your Favourite Product Here" type="search">
+                        </input>
                     </div>
+                    <div className="form-group input-group-append col-md-2">
+                        <button className="btn text-dark bg-light w-100 px-4 mySearchButton btn-outline-dark" onClick={this.searchByName}>Search</button>
+                    </div>
+                    <div className="col-md-1"></div>
+                    {/* </div>
+                    </div> */}
                 </div>
                 <div className="row">
                     <div className="dropdown ml-auto mb-3 mr-2">
-                        <button className="bg-dark btn text-light mr-2" onClick={this.removeFilter}>Remove filters</button>
-                        <button className="btn btn-dark dropdown-toggle" data-toggle="dropdown">
+                        <button className="btn-danger btn text-light mr-2 removeBtn" onClick={this.removeFilter}>Remove filters</button>
+                        <button className="btn btn-info dropdown-toggle" data-toggle="dropdown">
                             <span className="mr-2">Filters</span>
                         </button>
-                        <div className="dropdown-menu bg-dark">
-                            <button className="bg-dark dropdown-item text-light" onClick={this.filterByPrice1}>less than 30,000</button>
-                            <button className="bg-dark dropdown-item text-light" onClick={this.filterByPrice2}>greater than 30,000</button>
-                            <button className="bg-dark dropdown-item text-light" onClick={this.filterByPrice3}>20,000 - 40,000</button>
+                        <div className="dropdown-menu bg-light">
+                            <button className="bg-light dropdown-item text-dark" onClick={this.filterByPrice1}>less than 30,000</button>
+                            <button className="bg-light dropdown-item text-dark" onClick={this.filterByPrice2}>greater than 30,000</button>
+                            <button className="bg-light dropdown-item text-dark" onClick={this.filterByPrice3}>20,000 - 40,000</button>
                         </div>
                     </div>
                     <div className="dropdown mr-3">
-                        <button className="btn btn-dark dropdown-toggle" data-toggle="dropdown">
+                        <button className="btn btn-info dropdown-toggle" data-toggle="dropdown">
                             <span className="mr-2">Sort By</span>
                         </button>
-                        <div className="dropdown-menu bg-dark">
-                            <button className="bg-dark dropdown-item text-light" onClick={this.sortDefault}>Default</button>
-                            <button className="bg-dark dropdown-item text-light" onClick={this.sortLowToHigh}>Price low to high</button>
-                            <button className="bg-dark dropdown-item text-light" onClick={this.sortHighToLow}>price high to low</button>
+                        <div className="dropdown-menu bg-light">
+                            <button className="bg-light dropdown-item text-dark" onClick={this.sortDefault}>Default</button>
+                            <button className="bg-light dropdown-item text-dark" onClick={this.sortLowToHigh}>Price low to high</button>
+                            <button className="bg-light dropdown-item text-dark" onClick={this.sortHighToLow}>price high to low</button>
                         </div>
                     </div>
                 </div>
